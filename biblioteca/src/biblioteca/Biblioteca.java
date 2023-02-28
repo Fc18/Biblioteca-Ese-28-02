@@ -14,10 +14,10 @@ public class Biblioteca {
 		libri.forEach(libro-> libro.ricerca(gg));
 	}
 	
-	public String addLibro() {
+	public void addLibro(String titolo, String autore, String annodipubblicazione,String casaeditrice,int copiedisponibili) {
 		
-		libri.add(new Libri("P","P","P","p",1));
-		return "Aggiunto";
+		libri.add(new Libri(titolo,autore,annodipubblicazione,casaeditrice,copiedisponibili));
+		
 	}
 	
 }

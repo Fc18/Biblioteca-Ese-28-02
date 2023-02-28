@@ -15,10 +15,6 @@ public class Libri {
 		this.numeroCopie = numeroCopie;
 	}
 	
-	public void ricerca(String titolo) {
-		if(this.titolo.equals(titolo)) System.out.println("Trovato");
-	}
-	
 	public String getTitolo() {
 		return titolo;
 	}

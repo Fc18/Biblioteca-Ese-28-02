@@ -11,7 +11,8 @@ public class Main {
 		bb.addLibro("Così parlo Zarathustra","Friedrich Nietzsche","1883","Bocca",75);
 		bb.addLibro("Parola di Giobbe","Giobbe Covatta","1991","Salani editore",20);
 		bb.addLibro("1984","George Orwell","1949","Mondadori",90);
-		bb.prendiLibro("P");
+		
+		if(bb.prendiLibro("Il Gattopardo")) System.out.println("Il titolo corrisponde correttamente.");
 	}
 
 }

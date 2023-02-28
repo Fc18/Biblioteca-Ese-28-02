@@ -10,8 +10,13 @@ public class Biblioteca {
 		
 	}
 	
-	public void prendiLibro(String gg) {
-		libri.forEach(libro-> libro.ricerca(gg));
+	public boolean prendiLibro(String gg) {
+		boolean trovato = false;
+		for(Libri libro : libri) {
+			if(libro.getTitolo().contains(gg)) return true;
+		}
+		
+		return trovato;
 	}
 	
 	public void addLibro(String titolo, String autore, String annodipubblicazione,String casaeditrice,int copiedisponibili) {
@@ -24,16 +29,20 @@ public class Biblioteca {
 		int cont=0;
 		
 		while(cont<libri.size())
-		 { int indice=cont+1;Libri Libro =libri.get(cont);
+		 { 
+		 int indice=cont+1;Libri Libro =libri.get(cont);
 		 String titolo = Libro.getTitolo();
 		 String autore= Libro.getAutore();
 		 String annodiProduzione=Libro.getAnnoPubblicazione();
 		 String casaEditrice=Libro.getCasaEditrice();
+		 
 		 if( Titolo == titolo || autore== Titolo || casaEditrice==Titolo || annodiProduzione==Titolo)
-		 { System.out.println("Libro da cancellare "+indice);
+		 {   
+			 System.out.println("Libro da cancellare "+indice);
 			 libri.remove(cont);
-		 System.out.println("Libro eliminato");} cont++;
+		     System.out.println("Libro eliminato");} cont++;
 		 }
+		
 	}
 	
 }

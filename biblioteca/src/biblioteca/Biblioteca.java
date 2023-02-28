@@ -29,7 +29,7 @@ public class Biblioteca {
 		 String autore= Libro.getAutore();
 		 String annodiProduzione=Libro.getAnnoPubblicazione();
 		 String casaEditrice=Libro.getCasaEditrice();
-		 if( Titolo == titolo || autore== Titolo || casaEditrice==Titolo )
+		 if( Titolo == titolo || autore== Titolo || casaEditrice==Titolo || annodiProduzione==Titolo )
 		 { System.out.println("Libro da cancellare "+indice);
 			 libri.remove(cont);
 		 System.out.println("Libro eliminato");} cont++;

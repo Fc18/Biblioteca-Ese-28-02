@@ -20,4 +20,20 @@ public class Biblioteca {
 		
 	}
 	
+	public void RemoveLibro(String Titolo) {
+		int cont=0;
+		
+		while(cont<libri.size())
+		 { int indice=cont+1;Libri Libro =libri.get(cont);
+		 String titolo = Libro.getTitolo();
+		 String autore= Libro.getAutore();
+		 String annodiProduzione=Libro.getAnnoPubblicazione();
+		 String casaEditrice=Libro.getCasaEditrice();
+		 if( Titolo == titolo || autore== Titolo || casaEditrice==Titolo )
+		 { System.out.println("Libro da cancellare "+indice);
+			 libri.remove(cont);
+		 System.out.println("Libro eliminato");} cont++;
+		 }
+	}
+	
 }
